@@ -12,8 +12,6 @@ function Videos() {
         dispatch(fetchVideos())
     },[dispatch]);
 
-    console.log(videos);
-
     let content;
 
     if(isLoading) content = <Loading/>;
