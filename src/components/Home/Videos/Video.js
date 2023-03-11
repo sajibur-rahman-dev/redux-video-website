@@ -50,7 +50,7 @@ const Video = ({video}) => {
                            {author}
                         </Link>
                         <p className="text-gray-400 text-xs mt-1">
-                            {views} views . {duration}
+                            {views} views . {date}
                         </p>
                     </div>
                 </div>
