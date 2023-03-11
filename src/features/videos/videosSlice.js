@@ -1,5 +1,3 @@
-
-
 // initial state 
 
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
@@ -30,16 +28,18 @@ const videosSlice = createSlice({
             .addCase(fetchVideos.pending, (state) => {
                 state.isError = false;
                 state.isLoading = true;
-            })
-            .addCase(fetchVideos.fulfilled, (state, action) => {
+            });
+
+            builder.addCase(fetchVideos.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.videos = action.payload;
-            })
-            .addCase(fetchVideos.rejected, (state, action) => {
+            });
+
+            builder.addCase(fetchVideos.rejected, (state, action) => {
                 state.isLoading = false;
                 state.videos = [];
-                state.isError = false;
-                state.error = action.payload;
+                state.isError = true;
+                state.error = action.error.message;
             })
     }
 })
