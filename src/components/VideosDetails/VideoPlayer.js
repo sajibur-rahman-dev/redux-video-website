@@ -1,12 +1,12 @@
 import React from 'react'
 
-const VideoPlayer = ({link}) => {
+const VideoPlayer = ({link,title}) => {
     return (
         <iframe
             width="100%"
             className="aspect-video"
             src={link}
-            title="Some video title"
+            title={title}
             frameBorder=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

@@ -1,7 +1,7 @@
-// initial state 
-
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getVideos } from "./videosAPI";
+
+// initial state 
 
 const initialState = {
     isLoading: false,
@@ -9,7 +9,6 @@ const initialState = {
     isError: false,
     error: "",
 };
-
 
 // async fetch videos 
 
